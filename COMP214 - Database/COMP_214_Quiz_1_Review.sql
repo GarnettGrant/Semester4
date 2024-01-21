@@ -1,0 +1,48 @@
+-- SLCT RPLC    COLUMN  Query  Output         Table
+SELECT REPLACE(SHIPSTATE,'FL','FLORIDA') FROM JL_orders;
+
+-- Invalid
+SELECT TO_CHAR(ORDERDATE, '99/9999') FROM JL_ORDERS
+
+-- Initial Capital     
+SELECT INITCAP(FIRSTNAME), UPPER(LASTNAME) FROM JL_CUSTOMERS
+
+--TO CHAT with Currency Formatting
+SELECT cost,retail, TO_CHAR(retail-cost, '$999.99') as profit FROM jl_books
+
+-- When ordering in desc, null will be first
+SELECT * FROM JL_ORDERS
+ORDER BY SHIPCOST DESC
+
+-- When ordering in asc, the first numeric value is considered
+SELECT * FROM JL_ORDERS
+ORDER BY SHIPSTREET ASC
+
+--TESTING COMPARISON OPERATORS
+SELECT * FROM JL_ORDERS
+WHERE SHIPZIP IN 100000
+
+-- Selection:
+SELECT * FROM JL_BOOKS
+WHERE PUBID = '1'
+
+SELECT * FROM JL_ORDERS
+WHERE SHIPCITY LIKE 'ON%'
+
+-- MULITPLYING ANYTHING BY NULL WILL BE NULL
+SELECT 1 * NULL FROM DUAL 
+
+SELECT 'Welcome To Class' from DUAL
+SELECT INITCAP('Welcome To Class') from DUAL
+SELECT LOWER('Welcome To Class') from DUAL
+
+SELECT TO_CHAR(ORDERDATE, 'MM/DD') 
+FROM JL_ORDERS 
+WHERE ORDER# = 1000;
+
+SELECT TO_CHAR(ORDERDATE, 'MONTH/YY') 
+FROM JL_ORDERS 
+WHERE ORDER# = 1000;
+
+select to_char(orderdate, 'MM/YYYY')
+from jl_orders;
