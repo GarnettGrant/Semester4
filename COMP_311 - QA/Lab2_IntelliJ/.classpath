@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="Testing_Lab2_IntelliJ/src"/>
+	<classpathentry kind="lib" path="JarFiles/AirTicketDebuggingStart.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
